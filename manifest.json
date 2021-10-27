@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "ToNotion",
+  "version": "0.1",
+  "permissions": ["activeTab"],
+  "description": "Parses the content from specific websites in a useful way so that they can be added to Notion more conveniently",
+  "browser_action": {
+    "default_icon": {
+      "24": "icons/icon_24dp.png",
+      "38": "icons/icon_36dp.png"
+    },
+    "default_title": "ToNotion",
+    "default_popup": "popup/to-notion.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content_scripts/tonotion.js"]
+    }
+  ]
+}
